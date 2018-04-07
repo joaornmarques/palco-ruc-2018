@@ -1,0 +1,36 @@
+{
+	"defaults": {
+		"app_name": "palco-ruc-2018",
+		"keywords": "iot",
+		"author"  : "",
+		"domain"  : "",
+		"logo": "path_to_logo",
+		"og": {
+			"site_name": "palco-ruc-2018"
+		},
+		"social": {
+			"fb_app_id": "",
+			"fb_twitter_site": ""
+		}
+	},
+	"pages": [
+    	{
+	      "slug"           : "index",
+	      "name"           : "Home",
+	      "title"          : "Welcome home — palco-ruc-2018",
+	      "description"    : "Generated with Qnorr",
+	      "og_title"       : "optional, if you want a different page title for social media aka clickbait else default page title",
+	      "og_description" : "optional, if you want a different page description for social media  else default page description",
+	      "og_image"       : "asbolute_url_to_image_or_logo"
+	   },
+	   {
+	      "slug"           : "this should match to filename without extension",
+	      "name"           : "A name that would be displayed on a menu",
+	      "title"          : "Unique title",
+	      "description"    : "Unique description for the page",
+	      "og_title"       : "optional, if you want a different page title for social media aka clickbait else default page title",
+	      "og_description" : "optional, if you want a different page description for social media  else default page description",
+	      "og_image"       : "asbolute_url_to_image_or_logo, defaults to defaults.logo"
+	   }
+	]
+}
