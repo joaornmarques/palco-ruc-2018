@@ -1,5 +1,5 @@
 # palco-ruc-2018
-Your next static website, created using Qnorr.
+Website for the 2018 editon of Palco RUC
 
 ### Requirements
 1. A computer.
