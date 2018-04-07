@@ -152,8 +152,9 @@ export function styles() {
 
 export function scripts() {
   return rollup({
-    entry: paths.scripts.manifesto,
-    sourceMap: true,
+    input: paths.scripts.manifesto,
+    sourcemap: true,
+		format: 'es',
     plugins: [
       $.babel({
         exclude: 'node_modules/**',
