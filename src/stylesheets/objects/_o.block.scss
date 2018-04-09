@@ -16,34 +16,11 @@
 ==================================================== */
 
 
-.o-block,
-.o-block__img,
-.o-block__body {
-	display: block;
-}
-
-
 .o-block{
-
-	&--center{
-		text-align: center;
-	}
+   border: solid 1px black;
+   height: 50vw;
+   padding: $g-spacing-unit*2;
+   @include mappy-bp(md){
+      height: 25vw;
+   }
 }
-
-
-	.o-block__img {
-		margin-bottom: $g-baseline / 2;
-
-		.o-block--center & {
-			max-width: 100%;
-			margin: {
-            left: auto;
-            right: auto;
-         };
-		}
-	}
-
-	.o-block__body{
-		margin-bottom: $g-baseline;
-	}
-
