@@ -17,10 +17,17 @@
 
 
 .o-block{
-   border: solid 1px black;
+   border: solid 1px #000;
    height: 50vw;
    padding: $g-spacing-unit*2;
    @include mappy-bp(md){
       height: 25vw;
+   }
+}
+
+.o-block--logo{
+   padding: $g-spacing-unit*4;
+   @include mappy-bp(md){
+      padding: $g-spacing-unit*8;
    }
 }
