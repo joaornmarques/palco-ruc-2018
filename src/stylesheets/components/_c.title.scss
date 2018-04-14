@@ -1,0 +1,58 @@
+.c-title-artist{
+   @include font-size(30px,30px);
+   text-align: center;
+   font-weight: 700;
+   color: white;
+   -webkit-text-stroke: 1px black;
+   text-shadow: -($g-spacing-unit/4) 0 0px black;
+   transition: 0.2s ease;
+
+   @include mappy-bp(sm){
+      @include font-size(40px,40px);
+      text-shadow: -($g-spacing-unit/2) 0 0px black;
+   }
+
+   @include mappy-bp(mdl){
+      @include font-size(40px,40px);
+   }
+
+   @include mappy-bp(xl){
+      @include font-size(50px,50px);
+   }
+
+   @include mappy-bp(xxl){
+      @include font-size(60px,60px);
+   }
+}
+
+.c-title-day{
+   @include font-size(16px,16px);
+   font-style: italic;
+   font-family: "Kievitpro-medium", Helvetica, -apple-system, Roboto, sans-serif;
+   font-weight: 500;
+   @include mappy-bp(mdl){
+      @include font-size(20px,20px);
+   }
+   &--bold{
+      font-family: "Kievitpro-black", Helvetica, -apple-system, Roboto, sans-serif;
+      font-weight: 700;
+   }
+}
+
+.c-title-link{
+   @include font-size(18px,20px);
+   font-style: italic;
+   font-family: "Kievitpro-medium", Helvetica, -apple-system, Roboto, sans-serif;
+   font-weight: 700;
+   display: block;
+   margin-bottom: $g-spacing-unit;
+   transition: 0.2s ease;
+   color: white;
+   @include mappy-bp(mdl){
+      @include font-size(20px,20px);
+   }
+   &:hover{
+      transform: translateX($g-spacing-unit);
+      color: white;
+   }
+}

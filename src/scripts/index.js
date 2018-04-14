@@ -15,4 +15,5 @@
 	import * as module from "module";
 */
 
-import "./helpers/helloWorld.js";
+import "./vendor/jquery.min.js";
+import "./helpers/init.js";

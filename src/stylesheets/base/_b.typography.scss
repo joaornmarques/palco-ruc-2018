@@ -8,20 +8,6 @@
 //@include font-face($font-family: 'FontNAME', $file-path: 'fontPath', $font-weight: '500', $font-style: 'normal', $RoR: false);
 
 @font-face {
-    font-family: Kievitpro;
-    src: url("../assets/fonts/kiev/KIEVITPRO-REGULAR.OTF");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Kievitpro;
-    src: url("../assets/fonts/kiev/KIEVITPRO-ITALIC.OTF");
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
     font-family: Kievitpro-medium;
     src: url("../assets/fonts/kiev/KIEVITPRO-MEDIUM.OTF");
     font-weight: 500;
