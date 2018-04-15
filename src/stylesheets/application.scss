@@ -54,14 +54,9 @@
 
 
 //OBJECTS
-@import "objects/o.skeleton";
 @import "objects/o.container";
-@import "objects/o.section";
 @import "objects/o.grid";
-@import "objects/o.media";
-@import "objects/o.list";
 @import "objects/o.block";
-@import "objects/o.min-height-flex-wrapper";
 
 
 //COMPONENTS
@@ -74,8 +69,6 @@
 @import "scopes/s.debugging";
 //UTILITIES
 @import "utilities/u.coloring";
-@import "utilities/u.typescale";
-@import "utilities/u.text-alignment";
 @import "utilities/u.spacing";
 @import "utilities/u.sizing";
 @import "utilities/u.helpers";

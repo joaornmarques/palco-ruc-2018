@@ -13,11 +13,11 @@
 
 $g-colors-maps: (
    brand: (
-      lighter: mix(#6B3384, white, 80%),
-      light: mix(#6B3384, white, 90%),
-      base: #6B3384,
-      dark: mix(#6B3384, black, 90%),
-      darker: mix(#6B3384, black, 80%),
+      greenstrong: #B8FF00,
+      greenlight: #CFDD02,
+      purplerain: #4801FF,
+      floorblue: #004EAA,
+      dark: #1D1719
    ),
    primary:(
       light: mix(#50B4F3, white, 80%),
@@ -35,13 +35,13 @@ $g-colors-maps: (
       light: #333333,
       base: #161616
    ),
-   danger: #EC465B,
-   success: #00C766,
-   info: #6A9EBE,
-   warning: #F9A01B,
    white: #fff,
    celeste-1: #FF1615,
-   celeste-2: #00571E
+   celeste-2: #00571E,
+   scuru-1: #2980FF,
+   scuru-2: #FF1726,
+   paypal-1: #FE700C,
+   paypal-2: #00B6FF
 );
 
 

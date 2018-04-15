@@ -6,10 +6,16 @@
    -webkit-text-stroke: 1px black;
    text-shadow: -($g-spacing-unit/4) 0 0px black;
    transition: 0.2s ease;
+   text-transform: uppercase;
+   z-index: 2;
 
    @include mappy-bp(sm){
-      @include font-size(40px,40px);
+      @include font-size(50px,50px);
       text-shadow: -($g-spacing-unit/2) 0 0px black;
+   }
+
+   @include mappy-bp(md){
+      @include font-size(40px,40px);
    }
 
    @include mappy-bp(mdl){
@@ -22,6 +28,36 @@
 
    @include mappy-bp(xxl){
       @include font-size(60px,60px);
+   }
+
+   &--note{
+      font-family: "Kievitpro-medium", Helvetica, -apple-system, Roboto, sans-serif;
+      text-shadow: none;
+      font-weight: 500;
+      -webkit-text-stroke: 0;
+      color: black;
+      text-transform: none;
+      font-style: italic;
+   }
+
+   &--sm{
+      text-shadow: none;
+      @include font-size(24px,24px);
+      @include mappy-bp(sm){
+         @include font-size(34px,34px);
+      }
+
+      @include mappy-bp(mdl){
+         @include font-size(34px,34px);
+      }
+
+      @include mappy-bp(xl){
+         @include font-size(44px,44px);
+      }
+
+      @include mappy-bp(xxl){
+         @include font-size(54px,54px);
+      }
    }
 }
 

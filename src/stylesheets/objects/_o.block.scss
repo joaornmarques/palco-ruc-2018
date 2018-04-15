@@ -21,26 +21,12 @@
    height: 50vw;
    transition: background 0.2s ease;
    overflow: hidden;
-   cursor: pointer;
    @include mappy-bp(md){
       height: 25vw;
    }
    &:hover{
-      .o-block__image-product{
-         z-index: 1;
-      }
-      .c-title-artist{
-         z-index: 2;
-         animation: c-title-animation 1s infinite ease;
-      }
+      cursor: pointer;
    }
-}
-
-@keyframes c-title-animation {
-    0% {transform: skewX(0deg)}
-    25% {transform: skewX(20deg)}
-    50% {transform: skewX(-20deg)}
-    100% {transform: skewX(0deg)}
 }
 
 .o-block__content{
@@ -81,22 +67,16 @@
    position: absolute;
    top: 50%;
    left: 50%;
-   z-index: 2;
-   transition: transform 2s ease;
+   z-index: 1;
+   transition: transform 0.2s ease;
 
    &--front{
       z-index: 6 !important;
-      transform:translate(20%,0%) rotate(760deg) scale(1.5);
-      animation: product-front-animation 1s ease !important;
    }
 }
 
-@keyframes product-front-animation {
-    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
-    100% {transform:translate(20%,0%) rotate(760deg) scale(1.5);}
-}
-
 .o-block__image-artist{
+   z-index: -1;
    position: absolute;
    bottom: 0;
    left: 0;
@@ -107,6 +87,10 @@
 /*---------------------------------
 ------------MODIFIERS--------------
 ---------------------------------*/
+
+
+
+//--------CELESTE MARIPOSA--------//
 
 .o-block--logo{
    padding: $g-spacing-unit*4;
@@ -119,10 +103,15 @@
    .o-block__content--overlay{
       background-color: getAppColor('celeste-2');
    }
+   .o-block__image-product--front{
+      transform:translate(20%,0%) rotate(760deg) scale(1.5);
+      animation: celeste-front-animation 1s ease !important;
+   }
    &:hover{
       background-color: getAppColor('celeste-1');
       .c-title-artist{
          color: getAppColor('celeste-2');
+         animation: celeste-title-animation 1s infinite ease;
       }
       .o-block__image-product{
          animation: celeste-animation 1s infinite ease;
@@ -135,4 +124,185 @@
     25% {transform: translate(-50%,-50%) rotate(-40deg) scale(1.2);}
     50% {transform:translate(-50%,-50%) rotate(40deg) scale(1);}
     100% {transform:translate(-50%,-50%) rotate(00deg) scale(1);}
+}
+
+@keyframes celeste-title-animation {
+    0% {transform: skewX(0deg)}
+    25% {transform: skewX(20deg)}
+    50% {transform: skewX(-20deg)}
+    100% {transform: skewX(0deg)}
+}
+
+@keyframes celeste-front-animation {
+    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
+    100% {transform:translate(20%,0%) rotate(760deg) scale(1.5);}
+}
+
+
+//--------SCURU FITCHADU--------//
+
+.o-block--scuru{
+   .o-block__content--overlay{
+      background-color: getAppColor('scuru-2');
+   }
+   .o-block__image-product{
+      height: 60%;
+   }
+   .o-block__image-product--front{
+      transform: translate(-50%,40%) rotate(10deg) scale(1.2);;
+      animation: scuru-front-animation 0.3s ease !important;
+   }
+
+   .o-block__image-artist{
+      bottom: 0;
+      left: auto;
+      right: 0;
+      width: 70%;
+      height: 70%;
+   }
+
+   &:hover{
+      background-color: getAppColor('scuru-1');
+      .c-title-artist{
+         color: getAppColor('scuru-2');
+         animation: scuru-title-animation 1s infinite ease;
+      }
+      .o-block__image-product{
+         animation: scuru-animation 1s infinite ease;
+      }
+   }
+}
+
+@keyframes scuru-animation {
+    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
+    10% {transform: translate(-50%,-55%) rotate(-4deg) scale(1.2);}
+    20% {transform: translate(-50%,-55%) rotate(4deg) scale(1.2);}
+    30% {transform:translate(-50%,-45%) rotate(4deg) scale(1);}
+    40% {transform:translate(-50%,-45%) rotate(-4deg) scale(1);}
+    50% {transform:translate(-50%,-55%) rotate(4deg) scale(1.2);}
+    60% {transform:translate(-50%,-55%) rotate(4deg) scale(1.2);}
+    70% {transform:translate(-50%,-45%) rotate(-4deg) scale(1);}
+    80% {transform:translate(-50%,-45%) rotate(4deg) scale(1);}
+    90% {transform:translate(-50%,-50%) rotate(-4deg) scale(1);}
+    100% {transform:translate(-50%,-50%) rotate(0deg) scale(1);}
+}
+
+@keyframes scuru-title-animation {
+    0% {transform: skewY(0deg)}
+    20% {transform: skewY(10deg)}
+    40% {transform: skewY(-10deg)}
+    60% {transform: skewY(10deg)}
+    80% {transform: skewY(-10deg)}
+    100% {transform: skewY(0deg)}
+}
+
+@keyframes scuru-front-animation {
+    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
+    100% {transform:translate(-50%,40%) rotate(10deg) scale(1.2);}
+}
+
+
+//--------DJ PAYPAL--------//
+
+.o-block--paypal{
+   .o-block__content--overlay{
+      background-color: getAppColor('paypal-2');
+   }
+   .o-block__image-product{
+      height: 60%;
+   }
+   .o-block__image-product--front{
+      transform: translate(-20%,40%) rotate(10deg) scale(1.4);
+      animation: paypal-front-animation 0.3s ease !important;
+   }
+
+   &:hover{
+      background-color: getAppColor('paypal-1');
+      .c-title-artist{
+         color: getAppColor('paypal-2');
+         animation: paypal-title-animation 0.8s infinite ease;
+      }
+      .o-block__image-product{
+         animation: paypal-animation 0.8s infinite ease;
+      }
+   }
+}
+
+@keyframes paypal-animation {
+    0% {transform: translate(-50%,-50%) scaleY(1);}
+    25% {transform: translate(-50%,-40%) scaleY(0.7);}
+    50% {transform:translate(-50%,-50%) scale(1);}
+    75% {transform:translate(-50%,-40%) scaleY(0.7);}
+    100% {transform:translate(-50%,-50%) scale(1);}
+}
+
+@keyframes paypal-title-animation {
+    0% {transform: translateY(0) scaleY(1);}
+    25% {transform: translateY($g-spacing-unit*2) scaleY(0.7);}
+    50% {transform: translateY(0) scale(1);}
+    75% {transform: translateY($g-spacing-unit*2) scaleY(0.7);}
+    100% {transform: translateY(0) scale(1);}
+}
+
+@keyframes paypal-front-animation {
+    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
+    100% {transform:translate(-20%,40%) rotate(10deg) scale(1.4);}
+}
+
+
+//--------DJ GREEN--------//
+
+
+.o-block--dj-green{
+   .o-block__content--overlay{
+      background-color: getAppColor('brand', 'purplerain');
+   }
+   &:hover{
+      cursor: auto;
+      background-color: getAppColor('brand', 'greenlight');
+      .c-title-artist{
+         color: getAppColor(brand, 'greenstrong');
+         animation: dj-green-animation 1s infinite ease;
+      }
+   }
+}
+
+@keyframes dj-green-animation {
+    0% {transform: scaleY(1);}
+    25% {transform: scaleY(1.2);}
+    50% {transform: scaleY(1);}
+    75% {transform: scaleY(1.2);}
+    100% {transform: scaleY(1);}
+}
+
+
+//--------DJ DARK--------//
+
+
+.o-block--dj-dark{
+   .o-block__content--overlay{
+      background-color: getAppColor('brand', 'purplerain');
+   }
+   &:hover{
+      cursor: auto;
+      background-color: getAppColor('brand', 'dark');
+      .c-title-artist{
+         color: white;
+         animation: dj-dark-animation 1s infinite ease;
+      }
+      .c-title-day{
+         color: white;
+      }
+      .c-title-artist--note{
+         color: getAppColor('brand', 'greenstrong');
+      }
+   }
+}
+
+@keyframes dj-dark-animation {
+    0% {transform: scaleX(1);}
+    25% {transform: scaleX(1.1);}
+    50% {transform: scaleX(1);}
+    75% {transform: scaleX(1.1);}
+    100% {transform: scaleX(1);}
 }
