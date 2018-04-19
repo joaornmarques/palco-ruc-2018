@@ -66,3 +66,82 @@
       width: $g-spacing-unit * 1.5;
    }
 }
+
+
+.c-shelf-label{
+   position: absolute;
+   top: 0;
+   right: 10%;
+   height: 100%;
+   padding: $g-spacing-unit;
+   min-width: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   background-color: white;
+   border: solid 1px getAppColor('brand', 'dark');
+   transform: skewX(-4deg);
+   transition: transform 0.2s ease;
+   z-index: 9999;
+   cursor: auto;
+   @include mappy-bp(md){
+      min-width: $g-spacing-unit * 10;
+   }
+
+   &:hover{
+      transform: skewX(10deg) translateX(10%);
+   }
+}
+
+.c-shelf-label__day{
+   @include font-size(40px,40px);
+   text-align: left;
+   font-weight: 700;
+   font-style: italic;
+   color: getAppColor('brand', 'greenlight');
+   -webkit-text-stroke: 1px getAppColor('brand', 'dark');
+   transform: skewX(4deg) translateY(-20%);
+   @include mappy-bp(sm){
+      @include font-size(50px,50px);
+      text-shadow: -($g-spacing-unit/2) 0 0px white;
+   }
+
+   @include mappy-bp(md){
+      transform: skewX(4deg) translateY(-10%);
+      @include font-size(50px,50px);
+   }
+
+   @include mappy-bp(mdl){
+      @include font-size(60px,60px);
+   }
+
+   @include mappy-bp(xl){
+      @include font-size(70px,70px);
+   }
+
+   @include mappy-bp(xxl){
+      @include font-size(80px,80px);
+   }
+
+   &--baseline{
+      transform: skewX(4deg);
+
+      @include mappy-bp(md){
+         transform: skewX(4deg) translateY(10%);
+      }
+   }
+
+   &--dark{
+      color: getAppColor('brand', 'dark');
+   }
+}
+
+.c-shelf-label__weekday{
+   transform: skewX(4deg) translateY(-10%);
+   font-style: italic;
+   display: none;
+   @include mappy-bp(md){
+      display: block;
+   }
+}

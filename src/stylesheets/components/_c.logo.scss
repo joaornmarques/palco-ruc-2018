@@ -5,7 +5,7 @@
    width: $g-spacing-unit * 20;
    z-index: 9999;
 
-   @include mappy-bp(xs){
+   @include mappy-bp(sm){
       right: $g-baseline * 2;
       bottom: -$g-spacing-unit * 1.5;
       width: $g-spacing-unit * 30;
