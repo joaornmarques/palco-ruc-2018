@@ -17,28 +17,50 @@
 
 
 .o-block{
-   border: solid 1px #000;
-   height: 50vw;
    transition: background 0.2s ease;
    overflow: hidden;
+   position: relative;
    @include mappy-bp(md){
-      height: 25vw;
+      height: auto;
    }
    &:hover{
       cursor: pointer;
    }
 }
 
+.o-block-top{
+   border: solid 1px getAppColor('brand', 'dark');
+   background-color: getAppColor('brand', 'purplerain');
+   background: url('../assets/images/shelf_top.png');
+   background-size: cover;
+   background-position: center;
+   transform: skewX(45deg) translateX(-12px);
+   height: $g-baseline;
+
+   @include mappy-bp(xs){
+      height: $g-baseline * 4;
+      transform: skewX(45deg) translateX(-48px);
+   }
+
+   @include mappy-bp(md){
+      height: $g-baseline * 6;
+      transform: skewX(45deg) translateX(-72px);
+   }
+}
+
 .o-block__content{
-   z-index: 1;
-   padding: $g-spacing-unit;
-   width: 100%;
+   position: relative;
+   overflow: hidden;
+   border: solid 1px getAppColor('brand', 'dark');
+   padding: 0 $g-spacing-unit*2;
+   width: 98%;
    height: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   background-color: getAppColor('brand', 'greenlight');
    @include mappy-bp(sm){
-      padding: $g-spacing-unit*2;
+      padding: 0 $g-spacing-unit*3;
    }
 }
 
@@ -63,7 +85,7 @@
 .o-block__image-product{
    height: 70%;
    width: auto;
-   transform: translate(-50%,-50%);
+   transform: translate(-50%,-45%);
    position: absolute;
    top: 50%;
    left: 50%;
@@ -88,23 +110,59 @@
 ------------MODIFIERS--------------
 ---------------------------------*/
 
+//--------DAY DARK--------//
 
 
-//--------CELESTE MARIPOSA--------//
-
-.o-block--logo{
-   padding: $g-spacing-unit*4;
-   @include mappy-bp(md){
-      padding: $g-spacing-unit*8;
+.o-block--day-dark{
+   .o-block__content{
+      background-color: getAppColor('brand', 'dark');
+   }
+   .c-title-artist{
+      color: white;
+      text-shadow: -($g-spacing-unit/4) 0 0px getAppColor('brand', 'greenstrong');
+      @include mappy-bp(sm){
+         text-shadow: -($g-spacing-unit/2) 0 0px getAppColor('brand', 'greenstrong');
+      }
+   }
+   .c-title-day{
+      color: white;
+   }
+   .c-title-artist--note{
+      color: getAppColor('brand', 'greenstrong');
    }
 }
+
+
+//--------DAY CLEAR BACKGROUND--------//
+
+.o-block--day-bg{
+   .o-block__content{
+      background: url('../assets/images/shelf-background.png') getAppColor('brand', 'greenlight');
+      background-position: right;
+      background-size: auto 140%;
+      background-repeat: no-repeat;
+   }
+}
+
+
+//--------CELESTE LOGO--------//
+
+.o-block--logo{
+   padding: $g-spacing-unit*3;
+
+   @include mappy-bp(xs){
+      padding: $g-spacing-unit*6;
+   }
+}
+
+//--------CELESTE MARIPOSA--------//
 
 .o-block--celeste{
    .o-block__content--overlay{
       background-color: getAppColor('celeste-2');
    }
    .o-block__image-product--front{
-      transform:translate(20%,0%) rotate(760deg) scale(1.5);
+      transform:translate(20%,-15%) rotate(760deg) scale(1.5);
       animation: celeste-front-animation 1s ease !important;
    }
    &:hover{
@@ -120,10 +178,10 @@
 }
 
 @keyframes celeste-animation {
-    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
-    25% {transform: translate(-50%,-50%) rotate(-40deg) scale(1.2);}
-    50% {transform:translate(-50%,-50%) rotate(40deg) scale(1);}
-    100% {transform:translate(-50%,-50%) rotate(00deg) scale(1);}
+    0% {transform: translate(-50%,-45%) rotate(0deg) scale(1);}
+    25% {transform: translate(-50%,-45%) rotate(-40deg) scale(1.2);}
+    50% {transform:translate(-50%,-45%) rotate(40deg) scale(1);}
+    100% {transform:translate(-50%,-45%) rotate(00deg) scale(1);}
 }
 
 @keyframes celeste-title-animation {
@@ -134,8 +192,8 @@
 }
 
 @keyframes celeste-front-animation {
-    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
-    100% {transform:translate(20%,0%) rotate(760deg) scale(1.5);}
+    0% {transform: translate(-50%,-45%) rotate(0deg) scale(1);}
+    100% {transform:translate(20%,-15%) rotate(760deg) scale(1.5);}
 }
 
 
@@ -174,17 +232,17 @@
 }
 
 @keyframes scuru-animation {
-    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
-    10% {transform: translate(-50%,-55%) rotate(-4deg) scale(1.2);}
-    20% {transform: translate(-50%,-55%) rotate(4deg) scale(1.2);}
-    30% {transform:translate(-50%,-45%) rotate(4deg) scale(1);}
-    40% {transform:translate(-50%,-45%) rotate(-4deg) scale(1);}
-    50% {transform:translate(-50%,-55%) rotate(4deg) scale(1.2);}
-    60% {transform:translate(-50%,-55%) rotate(4deg) scale(1.2);}
-    70% {transform:translate(-50%,-45%) rotate(-4deg) scale(1);}
-    80% {transform:translate(-50%,-45%) rotate(4deg) scale(1);}
+    0% {transform: translate(-50%,-45%) rotate(0deg) scale(1);}
+    10% {transform: translate(-50%,-50%) rotate(-4deg) scale(1.2);}
+    20% {transform: translate(-50%,-50%) rotate(4deg) scale(1.2);}
+    30% {transform:translate(-50%,-40%) rotate(4deg) scale(1);}
+    40% {transform:translate(-50%,-40%) rotate(-4deg) scale(1);}
+    50% {transform:translate(-50%,-50%) rotate(4deg) scale(1.2);}
+    60% {transform:translate(-50%,-50%) rotate(4deg) scale(1.2);}
+    70% {transform:translate(-50%,-40%) rotate(-4deg) scale(1);}
+    80% {transform:translate(-50%,-40%) rotate(4deg) scale(1);}
     90% {transform:translate(-50%,-50%) rotate(-4deg) scale(1);}
-    100% {transform:translate(-50%,-50%) rotate(0deg) scale(1);}
+    100% {transform:translate(-50%,-45%) rotate(0deg) scale(1);}
 }
 
 @keyframes scuru-title-animation {
@@ -212,7 +270,7 @@
       height: 60%;
    }
    .o-block__image-product--front{
-      transform: translate(-20%,40%) rotate(10deg) scale(1.4);
+      transform: translate(-20%,40%) rotate(350deg) scale(1.4);
       animation: paypal-front-animation 0.3s ease !important;
    }
 
@@ -246,7 +304,7 @@
 
 @keyframes paypal-front-animation {
     0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
-    100% {transform:translate(-20%,40%) rotate(10deg) scale(1.4);}
+    100% {transform:translate(-20%,40%) rotate(350deg) scale(1.4);}
 }
 
 
@@ -254,16 +312,9 @@
 
 
 .o-block--dj-green{
-   .o-block__content--overlay{
-      background-color: getAppColor('brand', 'purplerain');
-   }
-   &:hover{
-      cursor: auto;
-      background-color: getAppColor('brand', 'greenlight');
-      .c-title-artist{
-         color: getAppColor(brand, 'greenstrong');
-         animation: dj-green-animation 1s infinite ease;
-      }
+   cursor: auto;
+   .c-title-artist{
+      color: getAppColor(brand, 'greenstrong');
    }
 }
 
@@ -280,22 +331,18 @@
 
 
 .o-block--dj-dark{
-   .o-block__content--overlay{
-      background-color: getAppColor('brand', 'purplerain');
-   }
-   &:hover{
-      cursor: auto;
+   cursor: auto;
+   .o-block__content{
       background-color: getAppColor('brand', 'dark');
-      .c-title-artist{
-         color: white;
-         animation: dj-dark-animation 1s infinite ease;
-      }
-      .c-title-day{
-         color: white;
-      }
-      .c-title-artist--note{
-         color: getAppColor('brand', 'greenstrong');
-      }
+   }
+   .c-title-artist{
+      color: white;
+   }
+   .c-title-day{
+      color: white;
+   }
+   .c-title-artist--note{
+      color: getAppColor('brand', 'greenstrong');
    }
 }
 

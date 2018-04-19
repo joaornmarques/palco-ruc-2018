@@ -1,0 +1,53 @@
+.c-shelf-levels{
+   z-index: 2;
+   height: $g-spacing-unit;
+   background-color: white;
+   border: solid 1px getAppColor('brand', 'dark');
+   width: 100%;
+   @include mappy-bp(sm){
+      height: $g-spacing-unit * 1.5;
+   }
+}
+
+.c-shelf-holder{
+   position: absolute;
+   top: 0;
+   left: -$g-spacing-unit;
+   height: 100%;
+   width: $g-spacing-unit * 2;
+   z-index: 1;
+   transform: skewX(4deg);
+   background-color: white;
+   border-right: solid 1px getAppColor('brand', 'dark');
+   @include mappy-bp(sm){
+      width: $g-spacing-unit * 2.5;
+   }
+
+   &--dark{
+      background-color: getAppColor('brand', 'purplerain');
+   }
+
+   &--v2{
+      transform: skewX(-4deg);
+      width: $g-spacing-unit * 1.5;
+      @include mappy-bp(sm){
+         width: $g-spacing-unit * 2;
+      }
+   }
+
+   &--right{
+      left: auto;
+      right: -$g-spacing-unit;
+      border-right: none;
+      border-left: solid 1px getAppColor('brand', 'dark');
+   }
+
+   &--right-v2{
+      left: auto;
+      right: -$g-spacing-unit;
+      transform: skewX(-4deg);
+      width: $g-spacing-unit * 2;
+      border-right: none;
+      border-left: solid 1px getAppColor('brand', 'dark');
+   }
+}

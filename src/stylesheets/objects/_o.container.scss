@@ -21,18 +21,27 @@ $container-sizes:(
 
 .o-container{
 	display: block;
+   position: relative;
 	width: 100%;
 	margin: 0 auto;
-	padding: {
-		left: $g-baseline / 2;
-		right: $g-baseline / 2;
-	}
+	padding-left: $g-baseline;
+   padding-right: $g-baseline;
+   background: url('../assets/images/shelf_shadow.png') getAppColor(brand, 'greenlight');
+   background-size: auto 100%;
+   background-position: right $g-baseline;
+   background-repeat: no-repeat;
 
-	@each $breakpoint, $size in $container-sizes{
-		@include mappy-bp($breakpoint){
-			max-width: $size;
-		}
-	}
+   @include mappy-bp(xs){
+      padding-left: $g-baseline * 4;
+      padding-right: $g-baseline * 4;
+      background-position: right $g-baseline * 4;
+   }
+
+   @include mappy-bp(md){
+      padding-left: $g-baseline * 6;
+      padding-right: $g-baseline * 6;
+      background-position: right $g-baseline * 5;
+   }
 
 
 	&--flush{
@@ -41,4 +50,31 @@ $container-sizes:(
 			right: 0;
 		}
 	}
+
+   &:after{
+      content: "";
+      position: absolute;
+      height: calc(100% - 1.5rem);
+      width: $g-baseline;
+      left: 0;
+      top: 0;
+      background-color: getAppColor('brand', 'greenlight');
+      background: url('../assets/images/shelf_left.png');
+      background-size: cover;
+      background-position: center;
+      transform: skewY(45deg) translateY(12px);
+      border: solid 1px getAppColor('brand', 'dark');
+
+      @include mappy-bp(xs){
+         height: calc(100% - 6rem);
+         width: $g-baseline * 4;
+         transform: skewY(45deg) translateY(48px);
+      }
+
+      @include mappy-bp(md){
+         height: calc(100% - 9rem);
+         width: $g-baseline * 6;
+         transform: skewY(45deg) translateY(72px);
+      }
+   }
 }
