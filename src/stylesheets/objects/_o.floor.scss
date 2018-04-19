@@ -1,0 +1,12 @@
+.o-floor{
+   width: 100%;
+   min-height: $g-baseline * 8;
+   background: url('../assets/images/floor.png')getAppColor('brand', 'floorblue');
+   background-position: center;
+   background-size: cover;
+   margin-top: -$g-baseline * 6;
+   @include mappy-bp(sm){
+      margin-top: -$g-baseline * 6;
+      min-height: $g-baseline * 10;
+   }
+}

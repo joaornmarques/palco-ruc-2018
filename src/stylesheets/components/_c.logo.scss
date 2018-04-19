@@ -1,0 +1,54 @@
+.c-logo{
+   position: fixed;
+   right: 0;
+   bottom: -$g-spacing-unit * 1.5;
+   width: $g-spacing-unit * 20;
+   z-index: 9999;
+
+   @include mappy-bp(xs){
+      right: $g-baseline * 2;
+      bottom: -$g-spacing-unit * 1.5;
+      width: $g-spacing-unit * 30;
+   }
+
+   @include mappy-bp(md){
+      right: $g-baseline * 3;
+      bottom: -$g-spacing-unit * 1.5;
+      width: $g-spacing-unit * 40;
+   }
+
+   svg{
+      margin: 0;
+      padding: 0;
+   }
+
+   &:hover{
+      animation: logo-animation 0.6s infinite ease;
+      .c-logo__background{
+         fill: getAppColor('brand', 'purplerain');
+      }
+      .c-logo__items{
+         fill: getAppColor('brand', 'greenstrong');
+      }
+      .c-logo__shadow{
+         fill: getAppColor('brand', 'floorblue');
+      }
+   }
+}
+
+.c-logo__shadow{
+   fill: getAppColor('brand', 'greenlight');
+}
+.c-logo__items{
+   fill: white;
+}
+.c-logo__background{
+   fill: getAppColor('brand', 'greenlight');
+   transition: 0.2s ease;
+}
+
+@keyframes logo-animation {
+    0% {transform: scaleY(1) translateY(0);}
+    50% {transform: scaleY(0.8) translateY(12%);}
+    100% {transform: scaleY(1) translateY(0%)}
+}

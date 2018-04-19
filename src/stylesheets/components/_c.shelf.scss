@@ -51,3 +51,18 @@
       border-left: solid 1px getAppColor('brand', 'dark');
    }
 }
+
+.c-shelf-feet{
+   position: absolute;
+   bottom: -$g-baseline;
+   height: $g-baseline;
+   width: $g-spacing-unit;
+   background-color: white;
+   border: solid 1px getAppColor('brand', 'dark');
+
+   @include mappy-bp(sm){
+      bottom: -$g-baseline * 1.5;
+      height: $g-baseline * 1.5;
+      width: $g-spacing-unit * 1.5;
+   }
+}
