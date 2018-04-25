@@ -55,11 +55,12 @@
    padding: 0 $g-spacing-unit*2;
    width: 98%;
    height: 100%;
+   z-index: 1;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    background-color: getAppColor('brand', 'greenlight');
-   transition: height 0.2s ease;
+   transition: 0.2s ease;
    @include mappy-bp(sm){
       padding: 0 $g-spacing-unit*3;
    }
@@ -72,15 +73,30 @@
    position: absolute;
    left: 0;
    top: 0;
+   align-items: center;
    justify-content: flex-start;
-   background-color: white;
-   transform: scale(0);
+   flex-direction: row;
+   transform: scaleY(0) translateY(-50%);
    transition: 0.2s ease;
 }
 
 .o-block__content--overlay-show{
-   transform: scale(1);
+   display: flex !important;
+   transform: scaleY(1) translateY(0);
    opacity: 1;
+}
+
+.o-block__content--base{
+   .c-title-artist{
+      transform: scaleY(1) translateY(0);
+      transition: 0.2s ease;
+   }
+}
+
+.o-block__content--base-hide{
+   .c-title-artist{
+      transform: scaleY(0) translateY(50%);
+   }
 }
 
 .o-block__image-product{
@@ -102,14 +118,33 @@
    z-index: -1;
    position: absolute;
    bottom: 0;
-   left: 0;
-   width: 50%;
-   height: 50%;
+   right: 0;
+   width: auto;
+   height: 100%;
 }
 
 /*---------------------------------
 ------------MODIFIERS--------------
 ---------------------------------*/
+
+//--------ANIMATIONS--------//
+
+.o-block--animation-1{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-1 0.9s infinite ease;
+         }
+      }
+   }
+}
+
+@keyframes block-animation-1 {
+    0% {transform: scaleX(1) skewX(0) translateX(0);}
+    25% {transform: scaleX(1) skewX(-34deg) translateX(2%);}
+    50% {transform: scaleX(1) skewX(-34deg) translateX(2%);}
+    100% {transform: scaleX(1) skewX(0) translateX(0);}
+}
 
 //--------DAY DARK--------//
 
@@ -130,6 +165,11 @@
    }
    .c-title-artist--note{
       color: getAppColor('brand', 'greenstrong');
+   }
+   &:hover{
+      .o-block__content--base{
+         background-color: getAppColor(brand, 'purplerain');
+      }
    }
 }
 
@@ -317,6 +357,9 @@
    .c-title-artist{
       color: getAppColor(brand, 'greenstrong');
    }
+   .o-block__content{
+      cursor: auto;
+   }
 }
 
 @keyframes dj-green-animation {
@@ -335,6 +378,7 @@
    cursor: auto;
    .o-block__content{
       background-color: getAppColor('brand', 'dark');
+      cursor: auto;
    }
    .c-title-artist{
       color: white;

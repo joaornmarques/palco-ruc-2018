@@ -4,17 +4,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
 $('.o-block').click(function() {
 	blockOverlay = $(this).children('.o-block__content--overlay');
-	blockProduct = $(this).children('.o-block__image-product');
+	blockBase = $(this).children('.o-block__content--base');
 	if(!blockOverlay.hasClass('o-block__content--overlay-show')){
 		//reset state
+		$('.o-block__content--base').removeClass('o-block__content--base-hide');
 		$('.o-block__content--overlay').removeClass('o-block__content--overlay-show');
-		$('.o-block__image-product').removeClass('o-block__image-product--front');
-
 
 		blockOverlay.show();
-		blockProduct.addClass('o-block__image-product--front');
 		setTimeout(function() {
 			blockOverlay.addClass('o-block__content--overlay-show');
+			blockBase.addClass('o-block__content--base-hide');
 		}, 10);
 	}
 });

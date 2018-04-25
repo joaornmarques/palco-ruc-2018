@@ -1,9 +1,10 @@
 .c-shelf-levels{
-   z-index: 2;
+   z-index: 8;
    height: $g-spacing-unit;
    background-color: white;
    border: solid 1px getAppColor('brand', 'dark');
    width: 100%;
+   position: relative;
    @include mappy-bp(sm){
       height: $g-spacing-unit * 1.5;
    }
@@ -15,7 +16,7 @@
    left: -$g-spacing-unit;
    height: 100%;
    width: $g-spacing-unit * 2;
-   z-index: 1;
+   z-index: 4;
    transform: skewX(4deg);
    background-color: white;
    border-right: solid 1px getAppColor('brand', 'dark');
@@ -64,6 +65,18 @@
       bottom: -$g-baseline * 1.5;
       height: $g-baseline * 1.5;
       width: $g-spacing-unit * 1.5;
+   }
+
+   &--right{
+      right: calc(1.5rem + 2%);
+
+      @include mappy-bp(xs){
+         right: calc(6rem + 1.5%);
+      }
+
+      @include mappy-bp(md){
+         right: calc(9rem + 1.5%);
+      }
    }
 }
 
