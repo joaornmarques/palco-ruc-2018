@@ -54,8 +54,8 @@
 
 .c-shelf-feet{
    position: absolute;
-   bottom: -$g-baseline;
-   height: $g-baseline;
+   bottom: -$g-baseline / 2;
+   height: $g-baseline / 2;
    width: $g-spacing-unit;
    background-color: white;
    border: solid 1px getAppColor('brand', 'dark');

@@ -1,12 +1,46 @@
 .o-floor{
    width: 100%;
-   min-height: $g-baseline * 8;
+   min-height: $g-baseline * 11;
    background: url('../assets/images/floor.png')getAppColor('brand', 'floorblue');
    background-position: center;
    background-size: cover;
    margin-top: -$g-baseline * 6;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
    @include mappy-bp(sm){
-      margin-top: -$g-baseline * 6;
-      min-height: $g-baseline * 10;
+      min-height: $g-baseline * 14;
+   }
+}
+
+.o-floor__text{
+   text-align: left;
+   font-family: "Kievitpro-black", Verdana, Geneva, sans-serif;
+   font-weight: 700;
+   font-style: italic;
+   @include font-size(18px,20px);
+   margin-top: $g-baseline * 7;
+   margin-left:  $g-baseline;
+   color: getAppColor(brand, 'greenstrong');
+   text-transform: uppercase;
+   -webkit-text-stroke: 1px getAppColor('brand', 'dark');
+
+   @include mappy-bp(xs){
+      text-align: left;
+      margin-left:  $g-baseline * 4;
+      @include font-size(20px,24px);
+   }
+
+   @include mappy-bp(sm){
+      text-align: left;
+      margin-left:  $g-baseline * 4;
+      margin-top: $g-baseline * 9;
+      @include font-size(22px,26px);
+   }
+
+   @include mappy-bp(md){
+      margin-left:  $g-baseline * 6;
+      margin-top: $g-baseline * 9;
+      @include font-size(28px,34px);
    }
 }

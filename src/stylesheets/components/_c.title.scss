@@ -31,7 +31,7 @@
    }
 
    &--note{
-      font-family: "Kievitpro-medium", Helvetica, -apple-system, Roboto, sans-serif;
+      font-family: "Kievitpro-medium", Verdana, Geneva, sans-serif;
       text-shadow: none;
       font-weight: 500;
       -webkit-text-stroke: 0;
@@ -64,13 +64,13 @@
 .c-title-day{
    @include font-size(16px,16px);
    font-style: italic;
-   font-family: "Kievitpro-medium", Helvetica, -apple-system, Roboto, sans-serif;
+   font-family: "Kievitpro-medium", Verdana, Geneva, sans-serif;
    font-weight: 500;
    @include mappy-bp(mdl){
       @include font-size(20px,20px);
    }
    &--bold{
-      font-family: "Kievitpro-black", Helvetica, -apple-system, Roboto, sans-serif;
+      font-family: "Kievitpro-black", Verdana, Geneva, sans-serif;
       font-weight: 700;
    }
 }
@@ -78,7 +78,7 @@
 .c-title-link{
    @include font-size(18px,20px);
    font-style: italic;
-   font-family: "Kievitpro-medium", Helvetica, -apple-system, Roboto, sans-serif;
+   font-family: "Kievitpro-medium", Verdana, Geneva, sans-serif;
    font-weight: 700;
    display: block;
    margin-bottom: $g-spacing-unit;

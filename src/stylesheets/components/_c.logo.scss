@@ -11,7 +11,7 @@
       width: $g-spacing-unit * 30;
    }
 
-   @include mappy-bp(md){
+   @include mappy-bp(lg){
       right: $g-baseline * 3;
       bottom: -$g-spacing-unit * 1.5;
       width: $g-spacing-unit * 40;
@@ -28,7 +28,7 @@
          fill: getAppColor('brand', 'purplerain');
       }
       .c-logo__items{
-         fill: getAppColor('brand', 'greenstrong');
+         fill: white;
       }
       .c-logo__shadow{
          fill: getAppColor('brand', 'floorblue');

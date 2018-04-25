@@ -59,6 +59,7 @@
    flex-direction: column;
    justify-content: space-between;
    background-color: getAppColor('brand', 'greenlight');
+   transition: height 0.2s ease;
    @include mappy-bp(sm){
       padding: 0 $g-spacing-unit*3;
    }
