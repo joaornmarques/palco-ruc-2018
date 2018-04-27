@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
-	console.log('%cDesign by:%cRubro del Rubro%c\nhttp://rubro-del-rubro.tumblr.com/\n\n',
+	console.log('%cDesign by:%cRubro del Rubro%c\n http://rubro-del-rubro.tumblr.com/',
 	'background: #CFDD02; color: #231F20; font-size: 14px; padding: 2px 4px;',
 	'background: #CFDD02; color: #4801FF; font-size: 14px; font-weight: bold; padding: 2px 4px;',
- 	'color: #CFDD02; font-size: 12px;');
-	console.log('%cWebsite by:%cJoão Marques%c\nhttp://joaomarques.website/\n\n',
+ 	'color: #CFDD02; font-size: 12px; margin-bottom: 20px;');
+	console.log('%cWebsite by:%cJoão Marques%c\n http://joaomarques.website/',
 	'background: #CFDD02; color: #231F20; font-size: 14px; padding: 2px 4px;',
 	'background: #CFDD02; color: #4801FF; font-size: 14px; font-weight: bold; padding: 2px 4px;',
- 	'color: #CFDD02; font-size: 12px;');
+ 	'color: #CFDD02; font-size: 12px; margin-bottom: 20px;');
 });
 
 $(document).ready(function() {
