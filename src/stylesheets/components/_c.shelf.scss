@@ -114,13 +114,14 @@
 }
 
 .c-shelf-label__day{
-   @include font-size(40px,40px);
-   text-align: left;
+   font-family: "Kievitpro-black", Verdana, Geneva, sans-serif;
    font-weight: 700;
+   @include font-size(32px,32px);
+   text-align: left;
    font-style: italic;
    color: getAppColor('brand', 'greenlight');
    -webkit-text-stroke: 1px getAppColor('brand', 'dark');
-   transform: skewX(4deg) translateY(-20%);
+   transform: skewX(4deg) translateY(-15%);
    @include mappy-bp(sm){
       @include font-size(50px,50px);
       text-shadow: -($g-spacing-unit/2) 0 0px white;
