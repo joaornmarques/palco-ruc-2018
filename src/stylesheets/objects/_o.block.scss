@@ -127,6 +127,10 @@
    right: 0;
    width: auto;
    height: 100%;
+   opacity: 0.3;
+   @include mappy-bp(sm){
+      opacity: 1;
+   }
 }
 
 /*---------------------------------

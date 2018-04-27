@@ -1,6 +1,6 @@
 .o-floor{
    width: 100%;
-   min-height: $g-baseline * 11;
+   min-height: $g-baseline * 12;
    background: url('../assets/images/floor.png')getAppColor('brand', 'floorblue');
    background-position: center;
    background-size: cover;
@@ -14,7 +14,11 @@
 
 
    @include mappy-bp(md){
-      min-height: $g-baseline * 15;
+      min-height: $g-baseline * 16;
+   }
+
+   @include mappy-bp(xxl){
+      min-height: $g-baseline * 18;
    }
 
    &--show{
@@ -52,10 +56,14 @@
       margin-top: $g-baseline * 9;
       @include font-size(28px,34px);
    }
+
+   @include mappy-bp(xxl){
+      margin-top: $g-baseline * 10;
+   }
 }
 
 .o-floor__credits{
-   margin-top: $g-baseline;
+   margin-top: $g-spacing-unit;
    margin-left:  $g-baseline * 4;
    margin-bottom: $g-baseline;
    font-size: 12px;
@@ -68,7 +76,7 @@
 
    @include mappy-bp(md){
       margin-left:  $g-baseline * 6;
-      margin-top: $g-baseline;
+      margin-top: $g-spacing-unit * 1.5;
    }
    font-style: italic;
    color: white;
