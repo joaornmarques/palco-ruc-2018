@@ -16,14 +16,11 @@
       <!--  Essential OG Tags -->
       <meta property="og:title" content="{{#if this.og_title}}{{this.og_title}}{{else}}{{this.title}}{{/if}}">
       <meta property="og:description" content="{{#if this.og_description}}{{this.og_description}}{{else}}{{this.description}}{{/if}}">
-      <meta property="og:image" content="{{#if this.og_image}}{{this.og_image}}{{else}}{{../meta.defaults.logo}}{{/if}}">
-      <meta property="og:url" content="{{../meta.defaults.domain}}{{this.slug}}">
+      <meta property="og:image" content="{{this.og_image}}">
+      <meta property="og:url" content="{{../meta.defaults.domain}}">
+      <meta name="og:site_name" content="{{../meta.defaults.og.site_name}}">
 
       <!--  Non-Essential, But Recommended -->
-      <meta name="og:site_name" content="{{../meta.og.site_name}}">
-      <meta name="twitter:image:alt" content="">
-      <meta name="twitter:card" content="">
-      <meta name="twitter:site" content="">
       <meta name="theme-color" content="#CFDD02">
    {{/ifpage}}
 {{/each}}

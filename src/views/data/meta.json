@@ -2,11 +2,10 @@
 	"defaults": {
 		"app_name": "palco-ruc-2018",
 		"keywords": "palco, RUC, 2018, queima, fitas, coimbra",
-		"author"  : "RUC",
-		"domain"  : "",
-		"logo": "path_to_logo",
+		"author"  : "Rádio Universidade de Coimbra",
+		"domain"  : "http://palcoruc.pt/",
 		"og": {
-			"site_name": "palco-ruc-2018"
+			"site_name": "Palco RUC 2018"
 		}
 	},
 	"pages": [
@@ -17,7 +16,7 @@
 	      "description"    : "Maio 4.5.6.7 — Queima das Fitas de Coimbra",
 	      "og_title"       : "Palco RUC 2018",
 	      "og_description" : "Maio 4.5.6.7 — Queima das Fitas de Coimbra",
-	      "og_image"       : "asbolute_url_to_image_or_logo"
+	      "og_image"       : "http://palcoruc.pt/assets/images/thumbnail.jpg"
 	   }
 	]
 }
