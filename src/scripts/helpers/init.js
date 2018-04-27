@@ -9,6 +9,19 @@ document.addEventListener("DOMContentLoaded", function(){
  	'color: #CFDD02; font-size: 12px; margin-bottom: 20px;');
 });
 
+/*-----------------------------
+-----------Page load-----------
+-----------------------------*/
+$(function() {
+	$(window).on('load', function(){
+		$('.o-floor').addClass('o-floor--show');
+		$('.c-logo').removeClass('c-logo--loading');
+		setTimeout(function() {
+			$('.o-container').addClass('o-container--show');
+		}, 200);
+	});
+});
+
 $(document).ready(function() {
 
     $('.c-logo').click(function(){

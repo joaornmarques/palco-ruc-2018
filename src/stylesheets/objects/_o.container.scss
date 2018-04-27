@@ -30,6 +30,9 @@ $container-sizes:(
    background-size: auto 100%;
    background-position: right $g-baseline;
    background-repeat: no-repeat;
+   transform: translateX(-$g-baseline * 2);
+   opacity: 0;
+   transition: 0.2s ease;
 
    @include mappy-bp(xs){
       padding-left: $g-baseline * 4;
@@ -43,6 +46,10 @@ $container-sizes:(
       background-position: right $g-baseline * 5;
    }
 
+   &--show{
+      transform: translateX(0);
+      opacity: 1;
+   }
 
 	&--flush{
 		padding: {

@@ -8,8 +8,15 @@
    display: flex;
    align-items: flex-start;
    justify-content: flex-start;
+   opacity: 0;
+   transition: opacity 0.2s ease;
+
    @include mappy-bp(sm){
       min-height: $g-baseline * 14;
+   }
+
+   &--show{
+      opacity: 1;
    }
 }
 

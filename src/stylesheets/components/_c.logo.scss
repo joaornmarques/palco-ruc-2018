@@ -35,6 +35,19 @@
          fill: getAppColor('brand', 'floorblue');
       }
    }
+
+   &--loading{
+      animation: logo-animation 0.6s infinite ease;
+      .c-logo__background{
+         fill: getAppColor('brand', 'greenlight');
+      }
+      .c-logo__items{
+         fill: getAppColor('brand', 'greenlight');
+      }
+      .c-logo__shadow{
+         fill: getAppColor('brand', 'greenlight');
+      }
+   }
 }
 
 .c-logo__shadow{
