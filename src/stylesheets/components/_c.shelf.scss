@@ -164,3 +164,80 @@
       display: block;
    }
 }
+
+.c-shelf__item{
+   display: inline-block;
+   max-width: $g-spacing-unit * 4;
+   max-height: 70%;
+   z-index: 7;
+   position: absolute;
+   bottom: $g-spacing-unit * 0.9;
+   transition: 0.2s ease;
+
+   @include mappy-bp(sm){
+      max-height: 70%;
+      bottom: $g-spacing-unit * 1.2;
+   }
+
+   @include mappy-bp(mdl){
+      max-height: 75%;
+   }
+   &:hover{
+      cursor: auto;
+   }
+}
+
+.c-shelf__item--bottle{
+   &:hover{
+      transform: rotate(20deg);
+   }
+}
+
+.c-shelf__item--orange{
+   max-width:  $g-spacing-unit * 2;
+   @include mappy-bp(sm){
+      max-width:  $g-spacing-unit * 3;
+   }
+
+   @include mappy-bp(mdl){
+      max-width:  $g-spacing-unit * 4;
+   }
+   &:hover{
+      transform: rotate(120deg) scale(1.2);
+   }
+}
+
+.c-shelf__item--pack{
+   max-width:  $g-spacing-unit * 6;
+
+   @include mappy-bp(sm){
+      max-width:  $g-spacing-unit * 7;
+   }
+
+   @include mappy-bp(mdl){
+      max-width:  $g-spacing-unit * 8;
+   }
+   &:hover{
+      transform: translateY(-$g-spacing-unit);
+   }
+}
+
+.c-shelf__item--melon{
+   max-width:  $g-spacing-unit * 8;
+
+   @include mappy-bp(sm){
+      max-width:  $g-spacing-unit * 9;
+   }
+
+   @include mappy-bp(mdl){
+      max-width:  $g-spacing-unit * 10;
+   }
+   &:hover{
+      transform: translateY(-$g-spacing-unit / 2) rotate(-30deg);
+   }
+}
+
+.c-shelf__item--hidden{
+   transform: translateY(($g-spacing-unit * 8));
+   opacity: 0;
+}
