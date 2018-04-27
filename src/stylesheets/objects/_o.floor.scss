@@ -8,11 +8,13 @@
    display: flex;
    align-items: flex-start;
    justify-content: flex-start;
+   flex-direction: column;
    opacity: 0;
    transition: opacity 0.2s ease;
 
-   @include mappy-bp(sm){
-      min-height: $g-baseline * 14;
+
+   @include mappy-bp(md){
+      min-height: $g-baseline * 15;
    }
 
    &--show{
@@ -49,5 +51,33 @@
       margin-left:  $g-baseline * 6;
       margin-top: $g-baseline * 9;
       @include font-size(28px,34px);
+   }
+}
+
+.o-floor__credits{
+   margin-top: $g-baseline;
+   margin-left:  $g-baseline * 4;
+   margin-bottom: $g-baseline;
+   font-size: 12px;
+   text-transform: uppercase;
+   display: none;
+
+   @include mappy-bp(sm){
+      display: block;
+   }
+
+   @include mappy-bp(md){
+      margin-left:  $g-baseline * 6;
+      margin-top: $g-baseline;
+   }
+   font-style: italic;
+   color: white;
+
+   &--link{
+      transition: 0.2s ease;
+      &:hover,
+      &:focus{
+         color: getAppColor(brand, 'greenstrong');
+      }
    }
 }
