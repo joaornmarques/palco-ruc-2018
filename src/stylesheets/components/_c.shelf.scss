@@ -95,7 +95,7 @@
    background-color: white;
    border: solid 1px getAppColor('brand', 'dark');
    transform: skewX(-4deg);
-   transition: transform 0.2s ease;
+   transition: 0.2s ease;
    z-index: 9999;
    cursor: auto;
    @include mappy-bp(md){
@@ -104,6 +104,12 @@
 
    &:hover{
       transform: skewX(10deg) translateX(10%);
+   }
+
+   &--hidden{
+      transition: 0.6s ease;
+      transform: rotateY(180deg) skewX(-50deg) translateX(- ($g-spacing-unit * 30));
+      opacity: 0;
    }
 }
 

@@ -80,12 +80,13 @@
    font-style: italic;
    font-family: "Kievitpro-medium", Verdana, Geneva, sans-serif;
    font-weight: 700;
-   margin-right: $g-spacing-unit * 2;
+   margin-right: $g-spacing-unit;
    margin-bottom: $g-spacing-unit;
    transition: 0.2s ease;
    color: white;
    @include mappy-bp(md){
       @include font-size(20px,20px);
+      margin-right: $g-spacing-unit * 2;
    }
    @include mappy-bp(lg){
       @include font-size(24px,24px);
@@ -93,5 +94,12 @@
    &:hover{
       transform: scale(1.1);
       color: getAppColor(brand, 'greenstrong');
+   }
+
+   &--inverse{
+      color: getAppColor(brand, 'dark');
+      &:hover{
+         color: getAppColor(brand, 'purplerain');
+      }
    }
 }

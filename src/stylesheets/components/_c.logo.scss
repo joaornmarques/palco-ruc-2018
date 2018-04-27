@@ -23,6 +23,7 @@
    }
 
    &:hover{
+      cursor: pointer;
       animation: logo-animation 0.6s infinite ease;
       .c-logo__background{
          fill: getAppColor('brand', 'purplerain');

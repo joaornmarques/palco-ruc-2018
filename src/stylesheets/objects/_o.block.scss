@@ -78,6 +78,9 @@
    flex-direction: row;
    transform: scaleY(0) translateY(-50%);
    transition: 0.2s ease;
+   &:hover{
+      cursor: auto;
+   }
 }
 
 .o-block__content--overlay-show{
@@ -90,6 +93,9 @@
    .c-title-artist{
       transform: scaleY(1) translateY(0);
       transition: 0.2s ease;
+   }
+   &:hover{
+      background-color: getAppColor(brand, 'greenstrong');
    }
 }
 
@@ -129,7 +135,7 @@
 
 //--------ANIMATIONS--------//
 
-.o-block--animation-1{
+.o-block--animation-skew-1{
    .o-block__content--base{
       &:hover{
          .c-title-artist{
@@ -139,11 +145,161 @@
    }
 }
 
+.o-block--animation-skew-2{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-2 0.6s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-skew-3{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-2 2s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-skew-4{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-1 0.65s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-squach-1{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-3 0.7s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-skew-squach{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-7 0.7s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-squach-2{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-6 1.2s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-squach-3{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-6 0.8s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-shake-1{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-4 0.7s infinite ease;
+         }
+      }
+   }
+}
+
+.o-block--animation-shake-2{
+   .o-block__content--base{
+      &:hover{
+         .c-title-artist{
+            animation: block-animation-5 1.2s infinite ease;
+         }
+      }
+   }
+}
+
 @keyframes block-animation-1 {
     0% {transform: scaleX(1) skewX(0) translateX(0);}
-    25% {transform: scaleX(1) skewX(-34deg) translateX(2%);}
+    20% {transform: scaleX(1) skewX(-34deg) translateX(2%);}
     50% {transform: scaleX(1) skewX(-34deg) translateX(2%);}
     100% {transform: scaleX(1) skewX(0) translateX(0);}
+}
+
+@keyframes block-animation-2 {
+    0% {transform: scaleX(1) skewX(0) translateX(0);}
+    25% {transform: scaleX(1) skewX(-24deg) translateX(1%);}
+    50% {transform: scaleX(1) skewX(24deg) translateX(-1%);}
+    75% {transform: scaleX(1) skewX(-24deg) translateX(1%);}
+    100% {transform: scaleX(1) skewX(0) translateX(0);}
+}
+
+@keyframes block-animation-3 {
+   0% {transform: translateY(0%) scaleY(1);}
+   25% {transform: translateY(9%) scaleY(0.7);}
+   50% {transform: translateY(0%) scale(1);}
+   75% {transform: translateY(9%) scaleY(0.7);}
+   100% {transform: translateY(0%) scale(1);}
+}
+
+@keyframes block-animation-4 {
+    0% {transform: translate(0%,2%) rotate(0deg) scale(1);}
+    10% {transform: translate(4%,0%) rotate(-1deg) scale(1.1);}
+    20% {transform: translate(4%,0%) rotate(1deg) scale(1.1);}
+    30% {transform: translate(0%,4%) rotate(1deg) scale(1);}
+    40% {transform: translate(0%,4%) rotate(-1deg) scale(1);}
+    50% {transform: translate(4%,0%) rotate(1deg) scale(1.1);}
+    60% {transform: translate(4%,0%) rotate(1deg) scale(1.1);}
+    70% {transform: translate(0%,4%) rotate(-1deg) scale(1);}
+    80% {transform: translate(0%,4%) rotate(1deg) scale(1);}
+    90% {transform: translate(0%,0%) rotate(-1deg) scale(1);}
+    100% {transform: translate(0%,2%) rotate(0deg) scale(1);}
+}
+
+@keyframes block-animation-5 {
+    0% {transform: translate(0%,2%) rotate(0deg) scale(1);}
+    10% {transform: translate(4%,0%) rotate(0.5deg) scale(1.1);}
+    20% {transform: translate(4%,0%) rotate(-0.5deg) scale(1.1);}
+    30% {transform: translate(0%,4%) rotate(0.5deg) scale(1);}
+    40% {transform: translate(0%,4%) rotate(-0.5deg) scale(1);}
+    50% {transform: translate(4%,0%) rotate(0.5deg) scale(1.1);}
+    60% {transform: translate(4%,0%) rotate(-0.5deg) scale(1.1);}
+    70% {transform: translate(0%,4%) rotate(0.5deg) scale(1);}
+    80% {transform: translate(4%,4%) rotate(-0.5deg) scale(1.1);}
+    90% {transform: translate(4%,0%) rotate(0.5deg) scale(1.1);}
+    100% {transform: translate(0%,2%) rotate(0deg) scale(1);}
+}
+
+@keyframes block-animation-6 {
+   0% {transform: translateX(0%) scaleX(1);}
+   25% {transform: translateX(-10%) scaleX(0.8);}
+   50% {transform: translateX(0%) scaleX(1);}
+   75% {transform: translateX(-10%) scaleX(0.8);}
+   100% {transform: translateX(0%) scaleX(1);}
+}
+
+@keyframes block-animation-7 {
+   0% {transform: skewX(0) scaleY(1);}
+   25% {transform: skewX(-12deg) scaleY(0.8);}
+   50% {transform: scaleY(1);}
+   75% {transform: skewX(12deg) scaleY(0.8);}
+   100% {transform: skewX(0deg) scaleY(1);}
 }
 
 //--------DAY DARK--------//
@@ -166,8 +322,8 @@
    .c-title-artist--note{
       color: getAppColor('brand', 'greenstrong');
    }
-   &:hover{
-      .o-block__content--base{
+   .o-block__content--base{
+      &:hover{
          background-color: getAppColor(brand, 'purplerain');
       }
    }
@@ -177,64 +333,18 @@
 //--------DAY CLEAR BACKGROUND--------//
 
 .o-block--day-bg{
-   .o-block__content{
+   .o-block__content--base{
       background: url('../assets/images/shelf-background.png') getAppColor('brand', 'greenlight');
       background-position: right;
       background-size: auto 140%;
       background-repeat: no-repeat;
-   }
-}
-
-
-//--------CELESTE LOGO--------//
-
-.o-block--logo{
-   padding: $g-spacing-unit*3;
-
-   @include mappy-bp(xs){
-      padding: $g-spacing-unit*6;
-   }
-}
-
-//--------CELESTE MARIPOSA--------//
-
-.o-block--celeste{
-   .o-block__content--overlay{
-      background-color: getAppColor('celeste-2');
-   }
-   .o-block__image-product--front{
-      transform:translate(20%,-15%) rotate(760deg) scale(1.5);
-      animation: celeste-front-animation 1s ease !important;
-   }
-   &:hover{
-      background-color: getAppColor('celeste-1');
-      .c-title-artist{
-         color: getAppColor('celeste-2');
-         animation: celeste-title-animation 1s infinite ease;
-      }
-      .o-block__image-product{
-         animation: celeste-animation 1s infinite ease;
+      &:hover{
+         background: url('../assets/images/shelf-background.png') getAppColor('brand', 'greenstrong');
+         background-position: right;
+         background-size: auto 140%;
+         background-repeat: no-repeat;
       }
    }
-}
-
-@keyframes celeste-animation {
-    0% {transform: translate(-50%,-45%) rotate(0deg) scale(1);}
-    25% {transform: translate(-50%,-45%) rotate(-40deg) scale(1.2);}
-    50% {transform:translate(-50%,-45%) rotate(40deg) scale(1);}
-    100% {transform:translate(-50%,-45%) rotate(00deg) scale(1);}
-}
-
-@keyframes celeste-title-animation {
-    0% {transform: skewX(0deg)}
-    25% {transform: skewX(20deg)}
-    50% {transform: skewX(-20deg)}
-    100% {transform: skewX(0deg)}
-}
-
-@keyframes celeste-front-animation {
-    0% {transform: translate(-50%,-45%) rotate(0deg) scale(1);}
-    100% {transform:translate(20%,-15%) rotate(760deg) scale(1.5);}
 }
 
 
@@ -298,54 +408,6 @@
 @keyframes scuru-front-animation {
     0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
     100% {transform:translate(-50%,40%) rotate(10deg) scale(1.2);}
-}
-
-
-//--------DJ PAYPAL--------//
-
-.o-block--paypal{
-   .o-block__content--overlay{
-      background-color: getAppColor('paypal-2');
-   }
-   .o-block__image-product{
-      height: 60%;
-   }
-   .o-block__image-product--front{
-      transform: translate(-20%,40%) rotate(350deg) scale(1.4);
-      animation: paypal-front-animation 0.3s ease !important;
-   }
-
-   &:hover{
-      background-color: getAppColor('paypal-1');
-      .c-title-artist{
-         color: getAppColor('paypal-2');
-         animation: paypal-title-animation 0.8s infinite ease;
-      }
-      .o-block__image-product{
-         animation: paypal-animation 0.8s infinite ease;
-      }
-   }
-}
-
-@keyframes paypal-animation {
-    0% {transform: translate(-50%,-50%) scaleY(1);}
-    25% {transform: translate(-50%,-40%) scaleY(0.7);}
-    50% {transform:translate(-50%,-50%) scale(1);}
-    75% {transform:translate(-50%,-40%) scaleY(0.7);}
-    100% {transform:translate(-50%,-50%) scale(1);}
-}
-
-@keyframes paypal-title-animation {
-    0% {transform: translateY(0) scaleY(1);}
-    25% {transform: translateY($g-spacing-unit*2) scaleY(0.7);}
-    50% {transform: translateY(0) scale(1);}
-    75% {transform: translateY($g-spacing-unit*2) scaleY(0.7);}
-    100% {transform: translateY(0) scale(1);}
-}
-
-@keyframes paypal-front-animation {
-    0% {transform: translate(-50%,-50%) rotate(0deg) scale(1);}
-    100% {transform:translate(-20%,40%) rotate(350deg) scale(1.4);}
 }
 
 
